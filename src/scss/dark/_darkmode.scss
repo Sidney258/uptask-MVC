@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+@media (prefers-color-scheme: dark) {
+    $grisOscuro: #2c2c3b;
+
+    // body {
+    //     background-color: $grisOscuro;
+    // }
+
+    // .tagline,
+    // .formulario label,
+    // .formulario .campo input,
+    // .login .acciones a,
+    // .crear .acciones a,
+    // .olvide .acciones a {
+    //     color: v.$blanco;
+    // }
+
+    // .descripcion-pagina {
+    //     color: v.$grisClaro;
+    // }
+
+    // .formulario .campo input {
+    //     background-color: lighten($grisOscuro, 5%);
+    // }
+
+    // .alerta.error {
+    //     background-color: v.$blanco;
+    //     color: v.$grisOscuro;
+    // }
+
+    // .barra-mobile {
+    //     background-color: $grisOscuro;
+    // }
+
+    // .contenido {
+    //     background-color: $grisOscuro;
+    // }
+
+    // .proyecto {}
+}

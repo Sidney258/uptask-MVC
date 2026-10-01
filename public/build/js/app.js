@@ -1,0 +1,1 @@
+const mobileMenu=document.querySelector("#mobile-menu"),sidebar=document.querySelector(".sidebar");mobileMenu&&mobileMenu.addEventListener("click",function(){sidebar.classList.toggle("mostrar")});

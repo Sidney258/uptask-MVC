@@ -1,0 +1,10 @@
+<aside class="sidebar">
+    <h2>UpTask</h2>
+
+    <nav class="sidebar-nav">
+        <a class="<?= $titulo === 'Proyectos' ? 'activo' : '' ?>" href="/dashboard">Proyectos</a>
+        <a class="<?= $titulo === 'Crear Proyecto' ? 'activo' : '' ?>" href="/crear-proyecto">Crear Proyecto</a>
+        <a class="<?= $titulo === 'Perfil' ? 'activo' : '' ?>" href="/perfil">Perfil</a>
+        <a href="/logout" class="cerrar-sesion-mobile">Cerrar Sesion</a>
+    </nav>
+</aside>

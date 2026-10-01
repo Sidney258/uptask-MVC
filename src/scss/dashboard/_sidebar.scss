@@ -1,0 +1,70 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sidebar {
+    opacity: 0;
+    visibility: hidden;
+    background-color: v.$indigo;
+    transition-property: opacity, visibility;
+    transition-duration: 500ms;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+
+    &.mostrar {
+        opacity: 1;
+        visibility: visible;
+        padding: 2rem;
+        height: 100%;
+        overflow: visible;
+    }
+
+    @include m.tablet {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+        padding: 2rem;
+    }
+
+    h2 {
+        color: v.$blanco;
+        margin: 0;
+        text-align: center;
+    }
+
+    .sidebar-nav {
+        margin-top: 5rem;
+
+        a {
+            display: block;
+            color: v.$blanco;
+            margin-bottom: 1.5rem;
+            padding: .7rem;
+            transition-property: background-color;
+            transition-duration: 300ms;
+            border-radius: .5rem;
+
+            &:hover,
+            &.activo {
+                background-color: darken($color: v.$indigo, $amount: 20%);
+            }
+        }
+
+        .cerrar-sesion-mobile {
+            margin-top: 3rem;
+            text-align: center;
+            background-color: darken($color: v.$indigo, $amount: 25%);
+            font-weight: 700;
+            letter-spacing: .5px;
+
+            &:hover {
+                background-color: darken($color: v.$indigo, $amount: 35%);
+            }
+
+            @include m.tablet {
+                display: none;
+            }
+        }
+    }
+}
