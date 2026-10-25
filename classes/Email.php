@@ -27,7 +27,7 @@ class Email
         $mail->Host = 'smtp.mailtrap.io';
         $mail->SMTPAuth = true;
         $mail->Port = $_ENV['EMAIL_PORT'];
-        $mail->Host = 'sandbox.smtp.mailtrap.io';
+        $mail->Host = $_ENV['EMAIL_HOST'];
         $mail->Password = $_ENV['EMAIL_PASS'];
         $mail->Username = $_ENV['EMAIL_USER'];
 
@@ -71,7 +71,7 @@ class Email
         $contenido = "<html>";
         $contenido .= "<p>Hola <strong>" . $this->nombre . "</strong>,</p>";
         $contenido .= "<p>Has solicitado reestablecer tu password, sigue el siguiente enlace para hacerlo:</p>";
-        $contenido .= "<a href='http://localhost:3000/reestablecer?token=" . $this->token . "'>Reestablecer Password</a>";
+        $contenido .= "<a href='" . $_ENV['HOST'] . "/reestablecer?token=" . $this->token . "'>Reestablecer Password</a>";
         $contenido .= '<p>Si no solicitaste este cambio, puedes ignorar este mensaje.</p>';
         $contenido .= "</html>";
 
